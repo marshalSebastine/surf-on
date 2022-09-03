@@ -1,26 +1,31 @@
 
 .parent-container{
     position: relative;
+    grid-column: 2/3;
+    grid-row: 2/3;
 }
 
 .wave-circle{
     display: inline;
     position: absolute;
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 1.5rem;
+    top: 50%;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 1.25rem;
     border: 1px black solid;
-    background-color: #aaebda;
+    background-color: whitesmoke;
     animation: make-wave 3s ease-in-out infinite;
     z-index: 1;
 }
 .wave-circle-bg{
     position: absolute;
-    width: 1.5rem;
-    height: 1.5rem;
-    border-radius: 1.5rem;
-    border: 1px black solid;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 1.25rem;
+    top: 50%;
+    border: 1.5px black solid;
     background-color: whitesmoke;
+    background-color: skyblue;
 }
 @keyframes make-wave {
 	0%,

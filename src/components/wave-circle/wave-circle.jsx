@@ -5,9 +5,9 @@ import './wave-circle.style.css';
 const WaveCirle = ({ style }) => {
 
     return(
-    <div style={style} className='parent-container'>
-        <div className='wave-circle'></div>
-        <div className='wave-circle-bg'></div>
+    <div className='parent-container'>
+        <div style={style} className='wave-circle'></div>
+        <div style={style} className='wave-circle-bg'></div>
     </div>
     )
 }
