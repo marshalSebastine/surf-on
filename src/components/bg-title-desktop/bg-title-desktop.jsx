@@ -5,9 +5,8 @@ import './bg-title-desktop.styles.css';
 import WaveCirle from '../wave-circle/wave-circle.jsx';
 
 const BackGroundTitleDesktop = () => {
-
+    const width = useSelector(selectWindowWidth) 
     function getResponsiveStyle(){
-        const width = useSelector(selectWindowWidth)
         console.log(`got width as ${width}`)
         const widthoftext = (0.8 * width * 0.8608)
         const scalofheader = 5/993.05
