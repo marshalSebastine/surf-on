@@ -1,26 +1,14 @@
-import React, { Fragment,useState,useEffect } from "react";
+import React, { Fragment } from "react";
+import { useSelector } from "react-redux";
+import {selectWindowWidth} from '../../store/reducers/windowproperties/windowproperties.selector';
 import './bg-title-desktop.styles.css';
 import WaveCirle from '../wave-circle/wave-circle.jsx';
 
 const BackGroundTitleDesktop = () => {
 
-
-    const updateDimensions = () => {
-        const width = window.innerWidth
-        setWindowWidth(width)
-      }
-
-    // eslint-disable-next-line no-unused-vars
-    const [width, setWindowWidth] = useState(0)
-    useEffect(() => { 
- 
-      updateDimensions();
-      window.addEventListener("resize",updateDimensions);
-      return () => 
-        window.removeEventListener("resize",updateDimensions);
-     }, [])
     function getResponsiveStyle(){
-
+        const width = useSelector(selectWindowWidth)
+        console.log(`got width as ${width}`)
         const widthoftext = (0.8 * width * 0.8608)
         const scalofheader = 5/993.05
         const headerfontsize = scalofheader*widthoftext
